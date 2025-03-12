@@ -123,46 +123,77 @@ http://localhost:3000/api
 
 ### Passos para Execução
 
-1. **Clone o repositório**
-
-   ```bash
-   git clone https://github.com/RafaelProfMgz/blog-cami.git
-   cd blog-cami
-   ```
-
-2. **Instale as dependências**
-
-   ```bash
-   npm install
-   ```
-
-3. **Configure o ambiente**
-
-   Crie um arquivo `.env` na raiz do projeto e configure as variáveis de ambiente necessárias. Um exemplo de configuração pode ser encontrado no arquivo `.env.example`.
-
-4. **Suba os contêineres Docker**
-
-   ```bash
-   docker-compose up -d
-   ```
-
-5. **Execute as migrações do Prisma**
-
-   ```bash
-   npx prisma migrate dev
-   ```
-
-6. **Inicie o servidor**
-
-   ```bash
-   npm run start:dev
-   ```
-
-7. **Acesse a API**
-
-   A API estará disponível em `http://localhost:3000`.
+Aqui está uma versão mais organizada e estruturada das instruções para facilitar o entendimento e execução:
 
 ---
+
+## Como Rodar o Projeto
+
+### 1. **Clone o Repositório**
+
+Primeiro, clone o repositório do projeto em sua máquina local:
+
+```bash
+git clone https://github.com/RafaelProfMgz/blog-cami.git
+cd blog-cami
+```
+
+### 2. **Instale as Dependências**
+
+Instale todas as dependências do projeto utilizando o `npm`:
+
+```bash
+npm install
+```
+
+### 3. **Configure o Ambiente**
+
+- Crie um arquivo `.env` na raiz do projeto.
+- Configure as variáveis de ambiente necessárias para o funcionamento da aplicação.
+
+Você pode encontrar um exemplo de configuração no arquivo `.env.example`.
+
+### 4. **Suba os Contêineres Docker**
+
+Para subir os contêineres Docker necessários para rodar a aplicação, execute:
+
+```bash
+docker-compose up -d
+```
+
+### 5. **Execute as Migrações do Prisma**
+
+Aplique as migrações do Prisma para configurar o banco de dados:
+
+```bash
+npx prisma migrate dev
+```
+
+### 6. **Inicie o Servidor**
+
+Agora, inicie o servidor de desenvolvimento para rodar a aplicação:
+
+```bash
+npm run start:dev
+```
+
+### 7. **Acesse a API**
+
+A documentação da API estará disponível em [http://localhost:3000](http://localhost:3000).
+
+### 8. **Verifique a Versão do Node.js (Opcional)**
+
+Caso esteja utilizando o **Node Version Manager (nvm)**, certifique-se de estar utilizando a versão correta do Node.js especificada no arquivo `.nvmrc`:
+
+```bash
+nvm use
+```
+
+Isso garantirá que você esteja utilizando a versão exata do Node.js necessária para o projeto.
+
+---
+
+Esses passos garantirão que você consiga configurar, executar e acessar a API do projeto de forma eficiente!
 
 ## 🧪 Testes
 
