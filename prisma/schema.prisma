@@ -1,0 +1,29 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Exemplo de modelo de dados: Usuário
+model User {
+  id        Int      @id @default(autoincrement()) // Identificador único
+  email     String   @unique // Campo único
+  password  String   // Senha do usuário
+  createdAt DateTime @default(now()) // Data de criação do usuário
+  updatedAt DateTime @updatedAt // Data de última atualização do usuário
+}
+
+// Exemplo de modelo de dados: Post
+model Post {
+  id        Int      @id @default(autoincrement()) // Identificador único
+  title     String   // Título do post
+  content   String   // Conteúdo do post
+  published Boolean  @default(false) // Se o post está publicado ou não
+  authorId  Int      // Relacionamento com o modelo User
+  author    User     @relation(fields: [authorId], references: [id]) // Relacionamento com a tabela User
+  createdAt DateTime @default(now()) // Data de criação do post
+  updatedAt DateTime @updatedAt // Data de última atualização do post
+}
